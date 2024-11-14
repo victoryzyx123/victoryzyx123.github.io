@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>健康辅助监测平台</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="Login">
+<!--Register-开始-->
+
+<div class="Login_heand dk">
+    <a href="#" class="Login_logo fl">
+        <img src="images/logo.png" class="fl"/><p class="fl">健康辅助检测平台</p><div class="clear"></div>
+    </a>
+  <div class="clear"></div>
+</div>
+
+<div class="Login_k">
+	<div class="Login_T">用户注册<p></p></div>
+    <!--注册-开始-->
+    <form class="Login_dl" onsubmit="event.preventDefault(); handleRegister();">
+        <div class="Login_row">
+            <input name="username" type="text" value="" class="Login_input Login_inp1" placeholder="用户名" required autocomplete="username"/>
+        </div> 
+        <div class="Login_row">
+            <input name="password" type="password" value="" class="Login_input Login_inp2" placeholder="密码" required autocomplete="new-password"/>
+        </div> 
+        <div class="Login_row">
+            <input name="confirm_password" type="password" value="" class="Login_input Login_inp2" placeholder="重复密码" required autocomplete="new-password"/>
+        </div> 
+        <!-- <div class="Login_row">
+            <input name="userpic" type="text" value="/static/images/defaultPathPic.jpg" class="Login_input Login_inp3" placeholder="头像链接 (可选)" />
+        </div>  -->
+        <a href="#" onclick="handleRegister(); return false;" class="Login_dla">注册</a>
+        <!-- <button type="submit" class="Login_dla">注册</button> -->
+        
+        <label class="Login_pitch fl">
+        	<input type="checkbox" name="checkbox01" class=" fl" /><div class="fl">自动登录</div><div class="clear"></div>
+        </label>
+        <div class="Login_wj fr">
+        	<a href="index.html">登录</a>
+        </div><div class="clear"></div>
+
+   </form>
+    <!--注册-结束-->
+</div>
+
+<!--Register-结束-->
+
+<!-- 引入外部JavaScript文件 -->
+<script src="handle/register.js"></script>
+    
+</body>
+</html>

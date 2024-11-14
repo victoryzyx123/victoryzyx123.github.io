@@ -1,0 +1,444 @@
+<!DOCTYPE html><HTML><HEAD><meta name="renderer" content="webkit"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/><TITLE>健康辅助系统 数据查询</TITLE><META Name="keywords" Content="数据上传," />
+  <META Name="description" Content="健康辅助系统,数据查询," />
+  <META Name="format-detection" Content="telephone=no" />
+  
+  
+  
+  
+  
+  <META charset="UTF-8">
+  <META content="IE=edge" http-equiv="X-UA-Compatible">
+  <META name="renderer" content="webkit"><LINK rel="stylesheet" type="text/css" href="css/index.css"><script language="javascript" src="js/jquery-latest.min.js"></script><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  
+  <!--Announced by Visual SiteBuilder 9-->
+  <link rel="stylesheet" type="text/css" href="css/_sitegray_d.css" />
+  <script language="javascript" src="js/_sitegray.js"></script>
+  <!-- CustomerNO:7765626265723230747f465453525742000000054156 -->
+  <link rel="stylesheet" type="text/css" href="css/index.vsb.css" />
+  <script type="text/javascript" src="js/vsbscreen.min.js" id="_vsbscreen" ></script>
+  <script type="text/javascript" src="js/counter.js"></script>
+  <script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1391600553)</script>
+  </HEAD>
+  <BODY > <div style='width:0px;height:0px;overflow: hidden;'><img src=""  /></div>
+  
+  
+  
+  
+  
+  
+  <style type="text/css">
+  
+  body{
+              background-image:url(images/background02.jpg) ; 
+          background-repeat:no-repeat;
+          background-position:top;
+          
+  }
+  .wrapper{
+      width:100%; 
+      background:url(images/logo.png) top center no-repeat; 
+      min-height:800px; 
+      background-size:100% 100%;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/background01.jpg',sizingMethod='scale');
+  }
+.blockwhite {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.title {
+  font-size: 24px;
+  color: #333;
+}
+.cont {
+  margin-top: 20px;
+}
+.disease-list {
+  height: 300px; /* 固定高度 */
+  overflow-y: scroll; /* 显示垂直滚动条 */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.disease-list div {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+.disease-list div:hover {
+  background-color: #f0f0f0;
+}
+.disease-details {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.report-list {
+  height: 300px;
+  overflow-y: scroll;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.report-list div {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+}
+#healthReportContainer {
+  margin-top: 10px;
+}
+  </style>
+  <DIV class="mainCont"><!--header S-->
+  <DIV class="dft-header">
+  <DIV class="topbar clearfix">
+  <DIV class="user-opr clearfix" style="height: 58px; float: right">
+  
+  <div style="clear:both;"></div>
+  
+  <script language="javascript" src="js/tsitesclick.js"></script>
+   <div class="item lag"><a href=""></a></div>
+
+
+<script> var _tsites_com_view_mode_type_=8;</script>
+<div class="item"><a href=""  target=_blank title="华中科技大学" ></a></div>
+</DIV>
+  
+  
+  
+  
+  
+  <script> var _tsites_com_view_mode_type_=8;</script>
+  <div class="logo" style="float: left;">
+      <img border="0" src="images/logo.png" title="健康平台logo" />
+      <div style="color: white; margin-left: 10px; font-size: 36px; display: inline-block; vertical-align: top;">健康辅助检测平台</div>
+  </div>
+  </DIV><!--nav-->
+  <DIV class="navBar clearfix">
+  
+  
+              <ul class="navbox clearfix"  id="MenuBar1" style="width:1136px;overflow: hidden;height:52px">
+   <li   ><h3><a href="function.html" >数据上传</a></h3>
+                  </li>
+  
+   <li   class="fNiv"   ><h3><a href="quiry.html" style=" background: #4d90d2;">数据查询</a></h3></li>
+  
+   <li   class="fNiv"   ><h3><a href="discussion.html"  >讨论区</a></h3></li>
+  </ul>
+       <script type="text/javascript">
+  jQuery(document).ready(function(){
+      var totalwidth = 1136-110;
+      var allliwidth = 0;
+      var othernavary = new Array();
+      var MenuBar3 = jQuery("#MenuBar3");
+      var MenuBar1 = jQuery("#MenuBar1");
+      var navliobjlist =  jQuery("#MenuBar1 > li");
+      
+      for(var i=0;i<navliobjlist.length-1;i++)
+      {
+          var liobj = navliobjlist.get(i);
+          if(liobj)
+          {
+              var jliobj = jQuery(liobj);
+              var liwidth = jliobj.width();
+              allliwidth+=liwidth+10;
+              if(allliwidth>=totalwidth && (i!=navliobjlist.length-1))
+              {
+                  var templiobj = jliobj[0];      
+                  othernavary.push(templiobj);
+                  MenuBar1[0].removeChild(jliobj[0]);
+              }
+          }
+      }
+      if(allliwidth>totalwidth)
+      {
+      jQuery("#MenuBar2").css("display","");
+      for(var i=0;i<othernavary.length;i++)
+      {
+          var tempotherli = jQuery(othernavary[i]);   
+          var sobli  = jQuery("<li class='item'></li>");
+          var soblih2  = jQuery("<h2></h2>");
+          var sonh2a = jQuery("<a></a>").attr({"href": tempotherli.find("h3 > a").attr("href")}).append(tempotherli.find("h3 > a").html());
+          soblih2.append(sonh2a);
+          var soblidiv  = jQuery("<div class='drop2'></div>");
+          
+          //循环取出所有的二级，然后循环生成p标签和a标签。放入
+          var number = tempotherli.find("h2 > a").length;
+          for(var j=0;j<number;j++)
+          {
+              var sonp = jQuery("<p></p>");
+              var sona = jQuery("<a></a>").attr({"href": tempotherli.find("h2 > a").eq(j).attr("href")}).append(tempotherli.find("h2 > a").eq(j).html());
+              sonp.append(sona);
+              soblidiv.append(sonp);
+          }
+          sobli.append(soblih2);
+          if(!number<1)
+          {
+              sobli.append(soblidiv);
+          }
+          
+              
+          MenuBar3.append(sobli);
+      }}
+  
+  jQuery("#MenuBar1").css("overflow","");
+  });
+  </script> 
+  
+  
+  
+  
+  
+  
+  </DIV></DIV><!--header E--><!--个人主页-->
+  <DIV class="dft-main clearfix">
+  <DIV class="dft-side"><!--教师个人-->
+  <DIV class="blockwhite JS-display">
+  <DIV class="js-top clearfix">
+  
+  <div class="photowrap">
+                              <div class="img"><span><img id="u_u6_23212pic" border="0" /></span></div>
+                          </div><script language="javascript" src="js/imagescale.js"></script>
+  <script type="text/javascript"> 
+   var u_u6_pic = new ImageScale("u_u6_",140,140,true,true);u_u6_pic.addimg("images\\logo.png","","张三","23212");
+  </script>
+  
+  <DIV class="info"><h2>张三</h2><script> var _tsites_com_view_mode_type_=8;</script>
+  <script language="javascript" src="js/tsitesencrypt.js"></script><div class="like"><i class="ico" src="images/background02.jpg" id="_parise_imgobj_u8"></i><span id="_parise_obj_u8"></span></div><script language="javascript" src="js/TsitesPraiseUtil.js"></script>
+  <script> var _TsitesPraiseUtil_u8= new TsitesPraiseUtil();_TsitesPraiseUtil_u8.setParam({'nodeid':'_parise_obj_u8','iscanclickidobj':'iscanclick_parise_obj_u8','pdtype':'0','imageid':'_parise_imgobj_u8','apptype':'index','basenum':'0','uid':'23212','homepageid':144365,'limttype':'allpage','limithour':24,'contentid':0});</script>
+  </DIV></DIV>  
+  </DIV>
+
+
+
+
+
+  <DIV class="blockwhite Psl-info">
+      <DIV class="title clearfix">
+          <I class="ico ico-1"></I>
+          <DIV class="info">
+              <H2>个人信息</H2>
+              <P>Personal information</P>
+          </DIV>
+      </DIV>
+      <DIV class="cont">
+          
+          <p id="account">
+              账号：123456
+          </p>
+
+          <p id="identity">
+              身份：用户
+          </p>
+
+          <p id="tel">
+              电话：111-3332-2222
+          </p>
+          
+          <p id="e-mail">
+              邮箱：123456789@qq.com
+          </p>
+      </DIV>
+  </DIV><!--side-->
+  
+  <script>
+  $(document).ready(function() {
+      // 假设后端API的URL
+      var apiUrl = 'https://your-backend-api-url/userinfo';
+  
+      $.ajax({
+          url: apiUrl,
+          type: 'GET',
+          success: function(data) {
+              $('#account').text('账号：' + data.account);
+              $('#identity').text('身份：' + data.identity);
+              $('#tel').text('电话：' + data.tel);
+              $('#email').text('邮箱：' + data.email);
+          },
+          error: function(error) {
+              console.log('Error:', error);
+          }
+      });
+  });
+  </script>
+  </DIV><!--side-->
+
+
+
+
+
+  <DIV class="dft-content clearfix">
+
+      <div class="dft-midcont">
+          <div class="blockwhite Psl-info">
+            <div class="title clearfix">
+              <i class="ico ico-4"></i>
+              <div class="info"><h2>健康报告</h2><p>View health report</p></div>
+            </div>
+            <div class="cont">
+              <div class="report-list" id="reportList">
+                <!-- 健康报告日期列表 -->
+              </div>
+              <div id="healthReportContainer">
+                <!-- 健康报告PDF显示区域 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+        // 从后端获取健康报告日期列表
+      //   function fetchHealthReportDates() {
+      //     var xhr = new XMLHttpRequest();
+      //     xhr.open('POST', 'http://localhost:8080/data/select', true);
+      //     xhr.setRequestHeader('Content-Type', 'application/json');
+      //     xhr.onreadystatechange = function() {
+      //       if (xhr.readyState === 4 && xhr.status === 200) {
+      //         var response = JSON.parse(xhr.responseText);
+      //         initReportList(response.health_reports);
+      //       }
+      //     };
+      //     xhr.send(JSON.stringify({
+      //       "id": 1,
+      //       "username": "exampleUser",
+      //       "userpic": "http://github.com/default.jpg"
+      //     }));
+      //   }
+        var healthReports = [
+            "2024-11-06T18:28:10+08:00",
+            "2024-11-05T18:28:10+08:00",
+            // 更多报告日期
+        ];
+          // 从后端获取健康报告日期列表
+        async function fetchHealthReportDates() {
+          var formData = new FormData();
+          formData.append('id', localStorage.getItem('userid'));
+          formData.append('username', localStorage.getItem('username'));
+          formData.append('userpic', localStorage.getItem('userpic'));
+
+          console.log(formData);
+
+          // 发送到后端API
+          try{
+              // 访问的后端api
+              var ipAdress = localStorage.getItem('ip');
+              var apiUrl = ipAdress+'data/select';
+
+              const response = await fetch(apiUrl, {
+                  method: 'POST',
+                  body: formData
+              });
+              
+              if (response.ok) {
+                  responseJson = await response.json();
+                  healthReports = responseJson.health_reports;
+                  // console.log(healthReports[0], healthReports[1]);
+                  initReportList(healthReports);
+              } else {
+                  console.log('Error:', response.statusText);
+              }
+          } catch (error) {
+              console.log('获取健康报告日期列表失败:', error);
+              alert('获取健康报告日期列表失败，请稍后再试。');
+          }
+        }
+
+        // 初始化健康报告日期列表
+        function initReportList(healthReports) {
+          var reportList = document.getElementById('reportList');
+          reportList.innerHTML = ''; // 清空现有列表
+          healthReports.forEach(function(reportDate) {
+            var div = document.createElement('div');
+            div.textContent = reportDate;
+            div.addEventListener('click', function() {
+              showHealthReport(reportDate);
+            });
+            reportList.appendChild(div);
+          });
+        }
+        
+        // 显示健康报告PDF
+        async function showHealthReport(reportDate) {
+            var healthReportContainer = document.getElementById('diseaseDetails');
+            var pdfViewer = document.getElementById('pdfViewer');
+            
+            // 从后端获取健康报告PDF
+            var formData = new FormData();
+            formData.append('id', localStorage.getItem('userid'));
+            formData.append('report_name', reportDate);
+            
+            // 发送到后端API
+            try {
+              // 访问的后端api
+              var ipAdress = localStorage.getItem('ip');
+              var apiUrl = ipAdress+'data/show';
+
+              const response = await fetch(apiUrl, {
+                method: 'POST',
+                body: formData
+              });
+              
+              if (response.ok) {
+                  const pdfUrlJson = await response.json(); 
+                  const pdfUrl = pdfUrlJson.pdf_url;
+                  console.log("获取健康报告成功: ", pdfUrl);
+                  // 直接将URL设置为iframe的src
+                  pdfViewer.src = pdfUrl; // 设置 iframe 的 src 为 PDF URL
+              } else {
+                  console.log('Error:', response.statusText);
+              }
+            } catch (error) {
+              console.log('获取健康报告失败:', error);
+              alert('获取健康报告失败，请稍后再试。');
+            }
+          }
+        
+        // 页面加载完成后获取健康报告日期列表
+        window.onload = function() {
+          fetchHealthReportDates();
+        };
+        </script>
+
+
+
+<div class="dft-rightcont">
+<div class="blockwhite Rsh-focus">
+  <div class="title clearfix">
+    <i class="ico ico-8"></i>
+    <div class="info"><h2>疾病详情</h2><p>Disease Details</p></div>
+  </div>
+  <div class="cont">
+    <div class="disease-list">
+      <!-- 健康报告日期列表 -->
+    </div>
+    <div class="disease-details" id="diseaseDetails">
+      <iframe id="pdfViewer" style="width: 100%; height: 600px; border: none;"></iframe>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- <script type="text/javascript"> 
+  function showDetails(name, detail) {
+    var details = document.getElementById('diseaseDetails');
+    details.innerHTML = '<p><strong>' + name + '</strong></p><p>' + detail + '</p>';
+    details.style.display = 'block';
+  }
+</script> -->
+
+
+  </DIV><!--content--></DIV></DIV><!--footer S-->
+  </BODY></HTML>
+  

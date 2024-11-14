@@ -1,0 +1,427 @@
+<!DOCTYPE html><HTML><HEAD><meta name="renderer" content="webkit"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/><TITLE>健康辅助系统 数据上传</TITLE><META Name="keywords" Content="数据上传," />
+    <META Name="description" Content="健康辅助系统,数据上传," />
+    <META Name="format-detection" Content="telephone=no" />
+    
+    
+    
+    
+    
+    <META charset="UTF-8">
+    <META content="IE=edge" http-equiv="X-UA-Compatible">
+    <META name="renderer" content="webkit"><LINK rel="stylesheet" type="text/css" href="css/index.css"><script language="javascript" src="js/jquery-latest.min.js"></script><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    
+    <!--Announced by Visual SiteBuilder 9-->
+    <link rel="stylesheet" type="text/css" href="css/_sitegray_d.css" />
+    <script language="javascript" src="js/_sitegray.js"></script>
+    <!-- CustomerNO:7765626265723230747f465453525742000000054156 -->
+    <link rel="stylesheet" type="text/css" href="css/index.vsb.css" />
+    <script type="text/javascript" src="js/vsbscreen.min.js" id="_vsbscreen" ></script>
+    <script type="text/javascript" src="js/counter.js"></script>
+    <script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1391600553)</script>
+    </HEAD>
+    <BODY > <div style='width:0px;height:0px;overflow: hidden;'><img src=""  /></div>
+    
+    
+    
+    
+    
+    
+    <style type="text/css">
+    
+    body{
+                background-image:url(images/background02.jpg) ; 
+            background-repeat:no-repeat;
+            background-position:top;
+            
+    }
+    .wrapper{
+        width:100%; 
+        background:url(images/logo.png) top center no-repeat; 
+        min-height:800px; 
+        background-size:100% 100%;
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/background01.jpg',sizingMethod='scale');
+    }
+  .blockwhite {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  .title {
+    font-size: 24px;
+    color: #333;
+  }
+  .cont {
+    margin-top: 20px;
+  }
+  .disease-list {
+    height: 300px; /* 固定高度 */
+    overflow-y: scroll; /* 显示垂直滚动条 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .disease-list div {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  .disease-list div:hover {
+    background-color: #f0f0f0;
+  }
+  .disease-details {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+    </style>
+    <DIV class="mainCont"><!--header S-->
+    <DIV class="dft-header">
+    <DIV class="topbar clearfix">
+    <DIV class="user-opr clearfix" style="height: 58px; float: right">
+    
+    <div style="clear:both;"></div>
+    
+    <script language="javascript" src="js/tsitesclick.js"></script>
+     <div class="item lag"><a href=""></a></div>
+
+
+<script> var _tsites_com_view_mode_type_=8;</script>
+<div class="item"><a href=""  target=_blank title="华中科技大学" ></a></div>
+</DIV>
+    
+    
+    
+    
+    
+    <script> var _tsites_com_view_mode_type_=8;</script>
+    <div class="logo" style="float: left;">
+        <img border="0" src="images/logo.png" title="健康平台logo" />
+        <div style="color: white; margin-left: 10px; font-size: 36px; display: inline-block; vertical-align: top;">健康辅助检测平台</div>
+    </div>
+    </DIV><!--nav-->
+    <DIV class="navBar clearfix">
+    
+    
+                <ul class="navbox clearfix"  id="MenuBar1" style="width:1136px;overflow: hidden;height:52px">
+     <li   ><h3><a href="function.html" style=" background: #4d90d2;">数据上传</a></h3>
+                    </li>
+    
+     <li   class="fNiv"   ><h3><a href="quiry.html" >数据查询</a></h3></li>
+    
+     <li   class="fNiv"   ><h3><a href="discussion.html"  >讨论区</a></h3></li>
+    </ul>
+         <!-- <script type="text/javascript">
+    jQuery(document).ready(function(){
+        var totalwidth = 1136-110;
+        var allliwidth = 0;
+        var othernavary = new Array();
+        var MenuBar3 = jQuery("#MenuBar3");
+        var MenuBar1 = jQuery("#MenuBar1");
+        var navliobjlist =  jQuery("#MenuBar1 > li");
+        
+        for(var i=0;i<navliobjlist.length-1;i++)
+        {
+            var liobj = navliobjlist.get(i);
+            if(liobj)
+            {
+                var jliobj = jQuery(liobj);
+                var liwidth = jliobj.width();
+                allliwidth+=liwidth+10;
+                if(allliwidth>=totalwidth && (i!=navliobjlist.length-1))
+                {
+                    var templiobj = jliobj[0];      
+                    othernavary.push(templiobj);
+                    MenuBar1[0].removeChild(jliobj[0]);
+                }
+            }
+        }
+        if(allliwidth>totalwidth)
+        {
+        jQuery("#MenuBar2").css("display","");
+        for(var i=0;i<othernavary.length;i++)
+        {
+            var tempotherli = jQuery(othernavary[i]);   
+            var sobli  = jQuery("<li class='item'></li>");
+            var soblih2  = jQuery("<h2></h2>");
+            var sonh2a = jQuery("<a></a>").attr({"href": tempotherli.find("h3 > a").attr("href")}).append(tempotherli.find("h3 > a").html());
+            soblih2.append(sonh2a);
+            var soblidiv  = jQuery("<div class='drop2'></div>");
+            
+            //循环取出所有的二级，然后循环生成p标签和a标签。放入
+            var number = tempotherli.find("h2 > a").length;
+            for(var j=0;j<number;j++)
+            {
+                var sonp = jQuery("<p></p>");
+                var sona = jQuery("<a></a>").attr({"href": tempotherli.find("h2 > a").eq(j).attr("href")}).append(tempotherli.find("h2 > a").eq(j).html());
+                sonp.append(sona);
+                soblidiv.append(sonp);
+            }
+            sobli.append(soblih2);
+            if(!number<1)
+            {
+                sobli.append(soblidiv);
+            }
+            
+                
+            MenuBar3.append(sobli);
+        }}
+    
+    jQuery("#MenuBar1").css("overflow","");
+    });
+    </script>  -->
+    
+    
+    
+    
+    
+    
+    </DIV></DIV><!--header E--><!--个人主页-->
+    <DIV class="dft-main clearfix">
+    <DIV class="dft-side"><!--教师个人-->
+    <DIV class="blockwhite JS-display">
+    <DIV class="js-top clearfix">
+    
+    <div class="photowrap">
+                                <div class="img"><span><img id="u_u6_23212pic" border="0" /></span></div>
+                            </div><script language="javascript" src="js/imagescale.js"></script>
+    <script type="text/javascript"> 
+     var u_u6_pic = new ImageScale("u_u6_",140,140,true,true);u_u6_pic.addimg("images\\logo.png","","张三","23212");
+    </script>
+    
+    <DIV class="info"><h2>张三</h2><script> var _tsites_com_view_mode_type_=8;</script>
+    <script language="javascript" src="js/tsitesencrypt.js"></script><div class="like"><i class="ico" src="images/background02.jpg" id="_parise_imgobj_u8"></i><span id="_parise_obj_u8"></span></div><script language="javascript" src="js/TsitesPraiseUtil.js"></script>
+    <script> var _TsitesPraiseUtil_u8= new TsitesPraiseUtil();_TsitesPraiseUtil_u8.setParam({'nodeid':'_parise_obj_u8','iscanclickidobj':'iscanclick_parise_obj_u8','pdtype':'0','imageid':'_parise_imgobj_u8','apptype':'index','basenum':'0','uid':'23212','homepageid':144365,'limttype':'allpage','limithour':24,'contentid':0});</script>
+    </DIV></DIV>  
+    </DIV>
+
+
+
+
+
+    <DIV class="blockwhite Psl-info">
+        <DIV class="title clearfix">
+            <I class="ico ico-1"></I>
+            <DIV class="info">
+                <H2>个人信息</H2>
+                <P>Personal information</P>
+            </DIV>
+        </DIV>
+        <DIV class="cont">
+            
+            <p id="account">
+                账号：123456
+            </p>
+
+            <p id="identity">
+                身份：用户
+            </p>
+
+            <p id="tel">
+                电话：111-3332-2222
+            </p>
+            
+            <p id="e-mail">
+                邮箱：123456789@qq.com
+            </p>
+        </DIV>
+    </DIV><!--side-->
+    
+    <script>
+    $(document).ready(function() {
+        // 假设后端API的URL
+        var apiUrl = 'https://your-backend-api-url/userinfo';
+    
+        $.ajax({
+            url: apiUrl,
+            type: 'GET',
+            success: function(data) {
+                $('#account').text('账号：' + data.account);
+                $('#identity').text('身份：' + data.identity);
+                $('#tel').text('电话：' + data.tel);
+                $('#email').text('邮箱：' + data.email);
+            },
+            error: function(error) {
+                console.log('Error:', error);
+            }
+        });
+    });
+    </script>
+    </DIV><!--side-->
+
+
+
+
+
+    <DIV class="dft-content clearfix">
+        <DIV class="dft-midcont">
+            <div class="blockwhite Psl-info">
+                <div class="title clearfix">
+                    <i class="ico ico-4"></i>
+                    <div class="info"><h2>图片上传</h2><p>Image upload</p></div>
+                </div>
+                <div class="cont">
+                    <!-- 图片预览区域 -->
+                    <div id="imagePreview" style="text-align: center; margin-bottom: 10px; width: 250px; height: 400px; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center; margin-left: auto; margin-right: auto;">
+                        <p>请选择图片</p>
+                        <img src="" id="previewImage" alt="预览图" style="max-width: 100%; display: none;" />
+                    </div>
+                    <!-- 文件输入和上传按钮 -->
+                    <input type="file" id="imageUpload" accept="image/*" />
+                    <button id="uploadButton" style="display: none; padding: 10px 20px; font-size: 16px; color: white; background-color: #4CAF50; border: none; border-radius: 5px; cursor: pointer; margin-left: auto; margin-right: auto; width: 200px;">上传图片</button>
+                    <!-- 上传后的文件名显示 -->
+                    <div id="imageInfo"></div>
+                </div>
+            </div> 
+        </DIV>
+        
+        <script>
+        document.getElementById('imageUpload').addEventListener('change', function(e) {
+            var files = e.target.files;
+            if (files.length > 0) {
+                var file = files[0];
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    // 显示图片预览
+                    var previewImage = document.getElementById('previewImage');
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                    document.getElementById('imagePreview').querySelector('p').style.display = 'none'; // 隐藏“点击上传图片”文本
+                    document.getElementById('uploadButton').style.display = 'block'; // 显示上传按钮
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        document.getElementById('uploadButton').addEventListener('click', function() {
+            var files = document.getElementById('imageUpload').files;
+            if (files.length > 0) {
+                var formData = new FormData();
+                formData.append('image', files[0]); // 'image' 是后端接收文件的键名
+
+                // 从 localStorage 获取用户信息
+                var uid = localStorage.getItem('userid');
+                var username = localStorage.getItem('username');
+                var userpic = localStorage.getItem('userpic');
+
+                // 创建用户信息 JSON 对象
+                var userInfo = {
+                    uid: uid,
+                    username: username,
+                    userpic: userpic
+                };
+
+                
+                // 将用户信息添加到 FormData 中，键为 "data"
+                formData.append('data', JSON.stringify(userInfo)); // 将 JSON 对象转换为字符串
+
+                // 访问的后端API
+                var ipAdress = localStorage.getItem('ip'); // 获取用户IP地址
+                var apiUrl = ipAdress + 'data/upload'; 
+                
+                // 发送AJAX请求上传图片
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', apiUrl); 
+                xhr.onload = function() {
+                    if (xhr.status === 201) {
+                        // 上传成功后的处理
+                        var response = JSON.parse(xhr.responseText);
+                        document.getElementById('imageInfo').textContent = '已上传文件：' + response.fileName; // 假设后端返回文件名
+                        
+                        // 调用分析图像API
+                        // alert('上传成功，正在调用图像分析API...');
+                        callImageAnalysisAPI(uid);
+                        // alert('图像分析API调用成功！')
+                    } else {
+                        // 错误处理
+                        console.error('上传失败');
+                    }
+                };
+                xhr.send(formData);
+            }
+        });
+
+        // 调用图像分析API的函数
+        function callImageAnalysisAPI(uid) {
+            var formData = new FormData();
+            formData.append('uid', uid); // 'uid' 是后端接收用户ID的键名
+
+            // 访问的后端API
+            var ipAdress = localStorage.getItem('ip'); // 获取用户IP地址
+            var apiUrl = ipAdress + 'data/analyse'; 
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', apiUrl); 
+            // xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    // 分析成功后的处理
+                    var analysisResponse = JSON.parse(xhr.responseText);
+                    console.log('分析结果:', analysisResponse);
+                    // 你可以根据分析结果更新界面，例如显示健康报告等
+                } else {
+                    console.error('图像分析失败:', xhr.statusText);
+                }
+            };
+
+            xhr.send(formData); // 发送用户数据的JSON字符串
+        }
+        </script>
+
+
+
+
+<div class="dft-rightcont">
+    <div class="blockwhite Rsh-focus">
+      <div class="title clearfix">
+        <i class="ico ico-8"></i>
+        <div class="info"><h2>疾病详情</h2><p>Disease Details</p></div>
+      </div>
+      <div class="cont">
+        <div class="disease-list">
+          <!-- 疾病名称列表 -->
+          <div onclick="showDetails('肺不张', '这是疾病1的详细解释。')">肺不张</div>
+          <div onclick="showDetails('变实', '这是疾病2的详细解释。')">变实</div>
+          <!-- 根据需要添加更多疾病 -->
+          <div onclick="showDetails('浸润', '这是疾病3的详细解释。')">浸润</div>
+          <div onclick="showDetails('气胸', '这是疾病4的详细解释。')">气胸</div>
+          <div onclick="showDetails('水肿', '这是疾病3的详细解释。')">水肿</div>
+          <div onclick="showDetails('肺气肿', '这是疾病4的详细解释。')">肺气肿</div>
+          <div onclick="showDetails('纤维变性', '这是疾病3的详细解释。')">纤维变性</div>
+          <div onclick="showDetails('积液', '这是疾病4的详细解释。')">积液</div>
+          <div onclick="showDetails('肺炎', '这是疾病3的详细解释。')">肺炎</div>
+          <div onclick="showDetails('胸膜增厚', '这是疾病4的详细解释。')">胸膜增厚</div>
+          <div onclick="showDetails('心脏肥大', '这是疾病3的详细解释。')">心脏肥大</div>
+          <div onclick="showDetails('结节', '这是疾病4的详细解释。')">结节</div>
+          <div onclick="showDetails('肿块', '这是疾病3的详细解释。')">肿块</div>
+          <div onclick="showDetails('疝气', '这是疾病4的详细解释。')">疝气</div>
+          <!-- 更多疾病 -->
+        </div>
+        <div class="disease-details" id="diseaseDetails">
+          <!-- 疾病详细解释 -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript"> 
+    function showDetails(name, detail) {
+      var details = document.getElementById('diseaseDetails');
+      details.innerHTML = '<p><strong>' + name + '</strong></p><p>' + detail + '</p>';
+      details.style.display = 'block';
+    }
+  </script>
+  
+
+    </DIV><!--content--></DIV></DIV><!--footer S-->
+    </BODY></HTML>
+    
